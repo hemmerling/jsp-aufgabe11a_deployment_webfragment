@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-fragment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xmlns="http://java.sun.com/xml/ns/javaee" 
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd" 
+              version="3.0" 
+              metadata-complete="true">
+    <!-- true: Annotationen in der Jar-Datei werden ignoriert -->
+    <name>aufgabe11a_deployment_webFragment</name>
+
+ <!-- 
+    ###############################################################
+    #                            Servlets                         #
+    ##############################################################
+    -->
+    
+    <servlet>
+        <servlet-name>WebFragmentServletXML1</servlet-name>
+        <servlet-class>com.hemmerling.aufgabe11a_deployment_webfragment.controller.WebFragmentServletXML1</servlet-class>   
+        <load-on-startup>10</load-on-startup>  
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WebFragmentServletXML1</servlet-name>
+        <url-pattern>/WebFragmentServletXML1</url-pattern>
+    </servlet-mapping>
+   
+    <servlet>
+        <servlet-name>WebFragmentServletXML2</servlet-name>
+        <servlet-class>com.hemmerling.aufgabe11a_deployment_webfragment.controller.WebFragmentServletXML2</servlet-class>
+        <load-on-startup>2</load-on-startup>       
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>WebFragmentServletXML2</servlet-name>
+        <url-pattern>/WebFragmentServletXML2</url-pattern>
+    </servlet-mapping>
+    <!-- 
+    ###############################################################
+    #                            Listener                         #
+    ##############################################################
+    -->
+    
+    <listener>
+        <description>WebFragmentContextListenerXML1</description> 
+        <listener-class>com.hemmerling.aufgabe11a_deployment_webfragment.controller.WebFragmentContextListenerXML1</listener-class>
+    </listener>
+    <listener>
+        <description>WebFragmentContextListenerXML2</description>
+        <listener-class>com.hemmerling.aufgabe11a_deployment_webfragment.controller.WebFragmentContextListenerXML2</listener-class>
+    </listener>
+
+</web-fragment>
